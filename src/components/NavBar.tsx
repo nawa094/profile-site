@@ -26,11 +26,14 @@ export const NavBar = () => {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
         borderRadius: 100,
         width: { xs: "90%", sm: "70%", md: "50%" }, // Responsive width
         marginLeft: { xs: "5%", sm: "15%", md: "25%" }, // Responsive margin
+        top: 15, // Stick to the top
+        left: 0, // Stick to the left
+        zIndex: theme.zIndex.drawer + 1,
       }}
     >
       <Toolbar>
